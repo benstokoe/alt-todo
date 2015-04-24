@@ -4,7 +4,8 @@ import TodoActions from '../actions/TodoActions';
 class TodoStore {
     constructor() {
         this.todos = {
-            1: { text: 'yo' }
+            1: { text: 'Get some milk' },
+            2: { text: 'Do something' }
         };
     }
 }
