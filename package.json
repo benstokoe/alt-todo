@@ -1,0 +1,38 @@
+{
+  "name": "alt-todo",
+  "version": "0.0.1",
+  "description": "Todo list in Alt flux",
+  "main": "js/app.js",
+  "scripts": {
+    "start": "watchify -o js/bundle.js -v -d js/app.js",
+    "build": "browserify . -t [envify --NODE_ENV production] | uglifyjs -cm > js/bundle.min.js",
+    "test": "jest"
+  },
+  "author": "Ben Stokoe",
+  "license": "ISC",
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
+  },
+  "devDependencies": {
+    "babel-jest": "^4.0.0",
+    "babelify": "^6.0.2",
+    "browserify": "^9.0.8",
+    "envify": "^3.4.0",
+    "jest-cli": "^0.4.0",
+    "reactify": "^1.1.0",
+    "watchify": "^3.1.2"
+  },
+  "dependencies": {
+    "alt": "^0.15.6",
+    "react": "^0.13.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
+  }
+}
