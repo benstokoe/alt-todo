@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import App from './components/App.react';
+import TodoApp from './components/TodoApp.react';
 
 React.render(
-    <App />,
+    <TodoApp />,
     document.getElementById('alt-todo')
 );

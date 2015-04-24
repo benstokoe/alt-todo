@@ -32,7 +32,9 @@
   "jest": {
     "scriptPreprocessor": "node_modules/babel-jest",
     "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/alt",
+      "<rootDir>/js/alt.js"
     ]
   }
 }
