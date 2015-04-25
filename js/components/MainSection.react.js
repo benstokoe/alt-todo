@@ -5,7 +5,6 @@ import TodoItem from './TodoItem.react';
 
 class MainSection extends React.Component {
     render() {
-        
         const allTodos = this.props.todos;
         let todos = [];
 
