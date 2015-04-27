@@ -19,6 +19,7 @@ class TodoTextInput extends React.Component {
 
     _save(event) {
         this.props.onSave(event.target.value);
+        event.target.value = '';
     }
 
     _onKeyDown(event) {
