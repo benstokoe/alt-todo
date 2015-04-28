@@ -32,6 +32,14 @@ class TodoStore {
         const complete = !this.todos[id].complete;
         this.update(id, { complete });
     }
+
+    onClearComplete() {
+        for(let id in this.todos) {
+            if (this.todos[id].complete === true) {
+                delete this.todos[id];
+            }
+        };
+    }
 }
 
 export default alt.createStore(TodoStore);

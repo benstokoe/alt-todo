@@ -4,6 +4,7 @@ import TodoStore from '../stores/TodoStore';
 
 import Header from './Header.react';
 import MainSection from './MainSection.react';
+import Footer from './Footer.react';
 
 function getTodoState() {
     return {
@@ -31,6 +32,7 @@ class TodoApp extends React.Component {
             <div>
                 <Header />
                 <MainSection todos={ this.state.allTodos } />
+                <Footer />
             </div>
         );
     }
