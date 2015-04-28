@@ -11,7 +11,7 @@ class TodoItem extends React.Component {
     }
 
     render() {
-        var todo = this.props.todo;
+        const { todo } = this.props;
 
         return (
             <li className={ classNames({ 'complete': todo.complete }) }>

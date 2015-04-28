@@ -20,7 +20,7 @@ class TodoStore {
             return false
         }
         // hand waving of course.
-        var id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36)
+        const id = (+new Date() + Math.floor(Math.random() * 999999)).toString(36)
         this.todos[id] = {
             id: id,
             complete: false,
@@ -29,7 +29,7 @@ class TodoStore {
     }
 
     onToggleComplete(id) {
-        var complete = !this.todos[id].complete;
+        const complete = !this.todos[id].complete;
         this.update(id, { complete });
     }
 }
