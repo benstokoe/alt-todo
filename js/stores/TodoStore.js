@@ -1,4 +1,5 @@
 import alt from '../alt';
+import merge from 'object-assign';
 
 import TodoActions from '../actions/TodoActions';
 
@@ -7,6 +8,10 @@ class TodoStore {
         this.bindActions(TodoActions);
 
         this.todos = {};
+    }
+
+    update(id, update) {
+        this.todos[id] = merge(this.todos[id], update);
     }
 
     onCreate(text) {
@@ -21,6 +26,11 @@ class TodoStore {
             complete: false,
             text: text
         }
+    }
+
+    onToggleComplete(id) {
+        var complete = !this.todos[id].complete;
+        this.update(id, { complete });
     }
 }
 
