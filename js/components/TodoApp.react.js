@@ -8,7 +8,8 @@ import Footer from './Footer.react';
 
 function getTodoState() {
     return {
-        allTodos: TodoStore.getState().todos
+        allTodos: TodoStore.getState().todos,
+        areAnyComplete: TodoStore.areAnyComplete()
     }
 }
 
@@ -32,7 +33,7 @@ class TodoApp extends React.Component {
             <div>
                 <Header />
                 <MainSection todos={ this.state.allTodos } />
-                <Footer />
+                <Footer areAnyComplete={ this.state.areAnyComplete } />
             </div>
         );
     }

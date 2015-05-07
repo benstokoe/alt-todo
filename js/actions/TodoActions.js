@@ -5,7 +5,8 @@ class TodoActions {
         this.generateActions(
             'create',
             'toggleComplete',
-            'clearComplete'
+            'clearComplete',
+            'areAnyComplete'
         )
     }
 }

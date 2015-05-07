@@ -40,6 +40,17 @@ class TodoStore {
             }
         };
     }
+
+    static areAnyComplete() {
+        const { todos } = this.getState();
+
+        for(let id in todos) {
+            if (todos[id].complete === true) {
+                return true;
+            }
+        };
+        return false;
+    }
 }
 
 export default alt.createStore(TodoStore);
