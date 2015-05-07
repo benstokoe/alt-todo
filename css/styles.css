@@ -1,3 +1,18 @@
+h1 {
+  text-align: center;
+}
+
+#todos {
+  margin: 20px 0;
+}
+
+ul {
+  list-style-type: none;
+}
+li span {
+  padding: 0 10px;
+}
+
 .complete {
   text-decoration: line-through;
   color: #999;

@@ -30,7 +30,7 @@ class TodoApp extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <Header />
                 <MainSection todos={ this.state.allTodos } />
                 <Footer areAnyComplete={ this.state.areAnyComplete } />

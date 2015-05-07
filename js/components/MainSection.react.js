@@ -13,7 +13,7 @@ class MainSection extends React.Component {
         }
 
         return (
-            <ul>
+            <ul id="todos">
                 { todos }
             </ul>
         );

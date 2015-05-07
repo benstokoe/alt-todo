@@ -11,6 +11,7 @@ class TodoTextInput extends React.Component {
     render() {
         return (
             <input
+                className="form-control"
                 onBlur={ this._save } 
                 onKeyDown={ this._onKeyDown }
             />

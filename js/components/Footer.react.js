@@ -14,6 +14,7 @@ class Footer extends React.Component {
         if (this.props.areAnyComplete) {
             allCompleteButton = 
                 <a href="#"
+                    className="btn btn-primary"
                     onClick={ this._clearAllCompleted }
                 >Clear all complete</a>;
         }
